@@ -1,7 +1,9 @@
-function Button ({onClick}) { 
+import { memo } from "react";
+
+function Button({ onClick }) {
     return (
-        <button onClick={onClick} type="button">Load more</button>
+        <button className="load" onClick={onClick} type="button">Load more</button>
     )
 }
 
-export default Button
+export default memo(Button)

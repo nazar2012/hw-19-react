@@ -1,12 +1,11 @@
 import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem"
 
-function ImageGallery({ images }) {
+function ImageGallery({ images, onImagesClick }) {
     return (
         <ul>
             {images.map((image) => {
                 return (
-                    <ImageGalleryItem key={image.id} image={image} />
-                )
+                    <ImageGalleryItem onImagesClick={onImagesClick} key={`${image.id}-${image.webformatURL}`} image={image} />)
             })}
         </ul>
     )

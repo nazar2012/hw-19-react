@@ -1,9 +1,8 @@
-function ImageGalleryItem({image}) {
+function ImageGalleryItem({ image, onImagesClick }) {
     return (
         <>
             <li>
-                <img src={image.webformatURL} alt={image.id} />
-            </li>
+                <img onClick={() => onImagesClick(image.largeImageURL)} src={image.webformatURL} alt={image.tags} />            </li>
         </>
     )
 }
